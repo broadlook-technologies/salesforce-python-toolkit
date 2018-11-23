@@ -20,8 +20,6 @@ Standard build script.
 
 __docformat__ = 'restructuredtext'
 
-import sys
-
 from setuptools import setup, find_packages
 
 setup(
@@ -34,7 +32,7 @@ setup(
     url="http://code.google.com/p/salesforce-python-toolkit/",
     download_url="http://code.google.com/p/salesforce-python-toolkit/downloads/list",
     platforms=['any'],
-    install_requires=['suds==0.3.9'],
+    install_requires=['suds-jurko==0.6'],
 
     license="LGPL",
     packages=find_packages('.'),

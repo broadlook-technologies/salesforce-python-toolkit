@@ -14,15 +14,5 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 # Written by: David Lanstein ( dlanstein gmail com )
 
-import string
-import sys
 
-#
-# Exceptions
-#
-
-class NotImplementedError(Exception):
-    def __init__(self, name):
-        Exception.__init__(self, name)
-
-__version__ = '0.1.5'
+__version__ = '0.2.0'
