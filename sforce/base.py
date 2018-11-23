@@ -32,10 +32,11 @@ class SforceBaseClient(object):
     _sessionId = None
     _location = None
     _product = 'Python Toolkit'
-    _version = (0, 1, 3)
+    _version = (1, 0, 0)
     _objectNamespace = None
     _strictResultTyping = False
 
+    _allOrNoneHeader = None
     _allowFieldTruncationHeader = None
     _assignmentRuleHeader = None
     _callOptions = None
@@ -230,6 +231,9 @@ Salesforce will use HTTPS.')
 
         if self._queryOptions is not None and call in ('query', 'queryAll', 'queryMore', 'retrieve'):
             headers['QueryOptions'] = self._queryOptions
+
+        if self._allOrNoneHeader is not None and call in ('create', 'delete', 'undelete', 'update', 'upsert'):
+            headers['AllOrNoneHeader'] = self._allOrNoneHeader
 
         if self._userTerritoryDeleteHeader is not None and call == 'delete':
             headers['UserTerritoryDeleteHeader'] = self._userTerritoryDeleteHeader
@@ -544,6 +548,9 @@ Salesforce will use HTTPS.')
 
     def setSessionHeader(self, header):
         self._sessionHeader = header
+
+    def setAllOrNoneHeader(self, header):
+        self._allOrNoneHeader = header
 
     def setUserTerritoryDeleteHeader(self, header):
         self._userTerritoryDeleteHeader = header

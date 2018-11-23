@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="salesforce-python-toolkit",
-    version='0.1.5',
+    version='1.0.0',
     description="",
     long_description="",
     author="David Lanstein",
