@@ -32,7 +32,7 @@ setup(
     url="http://code.google.com/p/salesforce-python-toolkit/",
     download_url="http://code.google.com/p/salesforce-python-toolkit/downloads/list",
     platforms=['any'],
-    install_requires=['suds-jurko==0.6'],
+    install_requires=['suds-py3==1.4.4.1'],
 
     license="LGPL",
     packages=find_packages('.'),
